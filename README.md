@@ -1,6 +1,6 @@
 # bob.chapter.hobpad2.facepadprotocols
  
-[Bob](https://www.idiap.ch/software/bob/) package for reproducing results of chapter on Challenges of Face Presentation Attack Detection in Real Scenarios.
+[Bob](https://www.idiap.ch/software/bob/) package for reproducing the results of chapter on Challenges of Face Presentation Attack Detection in Real Scenarios.
 
 
 ## Installation
@@ -67,8 +67,7 @@ bin/sphinx-build -b html doc/ doc/html/
   bin/reproducible_research.py --verbose
 ~~~
 
+## Reproducible Research
 
-## Reproducible Research 
-
-Follow the [Doc](https://acostapazo.github.io/bob.chapter.hobpad2.facepadprotocols/) gerenated with sphinx.
+Follow the[Doc](https://gradiant.github.io/bob.chapter.hobpad2.facepadprotocols/) gerenated with sphinx. If it is not generated yet, please be patient and create it with the instruction above. 
 

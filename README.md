@@ -64,7 +64,7 @@ bin/sphinx-build -b html doc/ doc/html/
 ## Console scripts
 
 ~~~
-  bin/reproducible_research.py --verbose
+  bin/reproducible_research.py
 ~~~
 
 ## Reproducible Research

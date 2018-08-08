@@ -69,5 +69,5 @@ bin/sphinx-build -b html doc/ doc/html/
 
 ## Reproducible Research
 
-Follow the[Doc](https://gradiant.github.io/bob.chapter.hobpad2.facepadprotocols/) gerenated with sphinx. If it is not generated yet, please be patient and create it with the instruction above. 
+Follow the [Doc](https://gradiant.github.io/bob.chapter.hobpad2.facepadprotocols/) gerenated with sphinx. If it is not generated yet, please be patient and create it with the instruction above. 
 

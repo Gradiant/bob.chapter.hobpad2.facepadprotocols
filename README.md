@@ -19,7 +19,7 @@ Note: You should be inside the package directory (bob.chapter.hobpad2.facepadpro
 
 ~~~
    source activate hobpad2_chapter14_env
-~~
+~~~
 
 4. Buildout the bob package
 
@@ -27,7 +27,7 @@ Note: You should be inside the package directory (bob.chapter.hobpad2.facepadpro
     #You should be inside the activated conda env (hobpad2_chapter14_env)
     python bootstrap-buildout.py
     bin/buildout
-~~
+~~~
 
 Note it is only tested on linux platforms.
 

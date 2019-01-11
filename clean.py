@@ -6,6 +6,7 @@ import os
 import shutil
 import glob
 
+
 def remove(path):
     """ param <path> could either be relative or absolute. """
     if os.path.isfile(path):
@@ -14,6 +15,7 @@ def remove(path):
         shutil.rmtree(path)  # remove dir and all contains
     else:
         print(" - file {} is not a file or dir.".format(path))
+
 
 def main():
     print("Cleaning auto-generated files and folders...")
@@ -32,9 +34,4 @@ def main():
 
 
 if __name__ == '__main__':
-  main()
-
-
-
-
-
+    main()

@@ -6,6 +6,7 @@ import numpy as np
 from bob.chapter.hobpad2.facepadprotocols import IqmFeaturesExtractor
 from bob.chapter.hobpad2.facepadprotocols.test.test_utils import TestUtils
 
+
 class UnitTestIqmFeaturesExtractor(unittest.TestCase):
 
     def test_run_with_dict_images_lanscape(self):

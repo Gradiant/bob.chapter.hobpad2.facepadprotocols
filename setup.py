@@ -8,7 +8,9 @@ from version import *
 setup(
     name='bob.chapter.hobpad2.facepadprotocols',
     version=get_version(),
-    description='Bob package for reproduce the experiments carried out in the chapter Challenges of Face Presentation Attack Detection in Real Scenarios in the Handbook of Biometric Anti-Spoofing 2',
+    description='Bob package for reproduce the experiments carried out in the chapter '
+                'Challenges of Face Presentation Attack Detection in Real Scenarios in '
+                'the Handbook of Biometric Anti-Spoofing 2',
     url='http://pypi.python.org/pypi/bob.chapter.hobpad2.facepadprotocols',
     license='BSD-3',
     author='Biometrics Team (Gradiant)',

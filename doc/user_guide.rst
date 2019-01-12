@@ -109,5 +109,8 @@ There is a IQM-based configuration file available with a prepared Iqm-based-face
 You will obtain a table like the following one:
 
 
-
+.. image:: img/end_to_end_results.png
+   :scale: 25 %
+   :alt: end_to_end_results
+   :align: center
 

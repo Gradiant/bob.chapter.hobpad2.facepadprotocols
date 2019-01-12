@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+function main(){
+    install_package
+    test_package
+    doc
+}
+
 function install_package(){
     python clean.py
     python bootstrap-buildout.py
@@ -17,6 +23,4 @@ function doc(){
     cd ../..
 }
 
-install_package
-test_package
-doc
+main

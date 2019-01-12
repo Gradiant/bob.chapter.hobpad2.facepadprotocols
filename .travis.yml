@@ -1,0 +1,22 @@
+sudo: required
+
+language: python
+
+services:
+  - docker
+
+before_install:
+  - docker pull acostapazo/bob.chapter.hobpad2.facepadprotocols:latest
+
+script:
+  - docker run -v $(pwd):/bob.chapter.hobpad2.facepadprotocols acostapazo/bob.chapter.hobpad2.facepadprotocols:latest bin/bash -c "cd bob.gradiant.core; ./ci.sh; ./rr.sh"
+
+# Deploy using travis builtin GitHub Pages support
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: doc/html
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
+

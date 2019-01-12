@@ -1,6 +1,7 @@
 # bob.chapter.hobpad2.facepadprotocols
  
-[Bob](https://www.idiap.ch/software/bob/) package for reproducing the results of chapter on [Challenges of Face Presentation Attack Detection in Real Scenarios](https://link.springer.com/chapter/10.1007/978-3-319-92627-8_12).
+[Bob](https://www.idiap.ch/software/bob/) package to reproduce the work carried out in chapter [Challenges of Face Presentation Attack Detection in Real Scenarios](https://link.springer.com/chapter/10.1007/978-3-319-92627-8_12) in the [Handbook of Biometric Anti-Spoofing](https://link.springer.com/book/10.1007/978-3-319-92627-8).
+
 
 ## Abstract 
 
@@ -26,29 +27,38 @@ url="https://doi.org/10.1007/978-3-319-92627-8_12"
 }
 ~~~
 
-## Docker 
+## Reproducible Research
 
-The fastest way to contact the package is to use docker. 
-
-You can download the docker image from dockerhub
+The easiest way to reproduce the result presented in the chapter is using docker.
 
 ~~~
-docker pull acostapazo/bob.gradiant:latest 
+docker pull acostapazo/bob.chapter.hobpad2.facepadprotocols:latest 
 ~~~
 
-or build it from Dockerfile
+Once you have downloaded the docker image, you can type:
 
 ~~~
-docker build --no-cache -t acostapazo/bob.gradiant:latest  .
+docker run -v $(pwd):/bob.chapter.hobpad2.facepadprotocols acostapazo/bob.chapter.hobpad2.facepadprotocols:latest bin/bash -c "cd bob.chapter.hobpad2.facepadprotocols; ./ci.sh; ./rr.sh"
 ~~~
 
-To check if everything is alright you can run the ci.sh script with:
+Then, the results will be available on the folder result/chapter
 
 ~~~
-docker run -v $(pwd):/bob.chapter.hobpad2.facepadprotocols acostapazo/bob.gradiant:latest bin/bash -c "cd bob.chapter.hobpad2.facepadprotocols; ./ci.sh"
+result/chapter/
+├── results
+│   ├── fig_5_a_iqm.png
+│   ├── fig_5_b_gradiant.png
+│   ├── fig_6_a_iqm.png
+│   ├── fig_6_b_gradiant.png
+│   ├── table_1_gradiant.html
+│   └── table_1_iqm.html
+└── summary.html
 ~~~
 
-## Installation (Manual)
+For more info, please check out the [Doc](https://gradiant.github.io/bob.chapter.hobpad2.facepadprotocols/).
+
+
+## Installation (Local)
 
 
 1. Install conda -> https://conda.io/docs/user-guide/install/index.html
@@ -72,6 +82,11 @@ docker run -v $(pwd):/bob.chapter.hobpad2.facepadprotocols acostapazo/bob.gradia
 ~~~
     conda install gitpython h5py pillow scikit-learn mock sphinx_rtd_theme bob.extension bob.ip.qualitymeasure
     pip install enum34
+    conda install bob.ip.qualitymeasure
+    pip install py-cpuinfo
+    pip install dill==0.2.7.1
+    pip install coloredlogs
+    apt-get install -y wget unzip
 ~~~
 
 
@@ -111,8 +126,16 @@ Coverage result will be store on htmlcov/.
 bin/sphinx-build -b html doc/ doc/html/
 ~~~
 
+## Update Docker 
 
-## Reproducible Research
+You can build your own docker image with
 
-Follow the [Doc](https://gradiant.github.io/bob.chapter.hobpad2.facepadprotocols/) gerenated with sphinx. If it is not generated yet, please be patient and create it with the instruction above. 
+~~~
+docker build --no-cache -t your.user/your.image:latest  .
+~~~
 
+To check if everything is alright you can run the ci.sh script with:
+
+~~~
+docker run -v $(pwd):/bob.chapter.hobpad2.facepadprotocols your.user/your.image:latest bin/bash -c "cd bob.chapter.hobpad2.facepadprotocols; ./ci.sh"
+~~~

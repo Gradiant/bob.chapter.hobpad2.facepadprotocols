@@ -11,16 +11,19 @@ import subprocess
 SCORES_URL = 'https://portal.gradiant.org/GradBox/index.php/s/48E0XAaydabvZ2c/download'
 SCORES_FOLDER = 'scores/oulu-npu/'
 
+
 def is_already_downloaded():
     already_downloaded = False
     if os.path.isdir(SCORES_FOLDER):
         already_downloaded = True
     return already_downloaded
 
-def get_logger(level = 'INFO'):
+
+def get_logger(level='INFO'):
     logger = logging.getLogger('Download scores')
     coloredlogs.install(level=level, logger=logger)
     return logger
+
 
 def main():
     args = parser()
@@ -43,9 +46,9 @@ def main():
         if not os.path.isdir('scores'):
             os.makedirs('scores')
 
-        commands = { '1-downloading' :  'wget {} -O {} {}'.format(SCORES_URL, dest_path_zip,quiet),
-                     '2-unzipping' : 'unzip {} -d {}'.format(dest_path_zip, tmp_path),
-                     '3-moving to scores folder' : 'mv {}/{}/* scores'.format(tmp_path,name_zip)}
+        commands = {'1-downloading': 'wget {} -O {} {}'.format(SCORES_URL, dest_path_zip, quiet),
+                    '2-unzipping': 'unzip {} -d {}'.format(dest_path_zip, tmp_path),
+                    '3-moving to scores folder': 'mv {}/{}/* scores'.format(tmp_path, name_zip)}
 
         for message, cmd in sorted(commands.iteritems()):
             logger.debug('{}...'.format(message))
@@ -59,12 +62,6 @@ def main():
     else:
         logger.debug('The score files are already downloaded in {}'.format(SCORES_FOLDER))
 
-    # add format color
-    # create environment
-    # add format
-    # capture output and errors from subprocess
-
-
 
 if __name__ == '__main__':
-  main()
+    main()

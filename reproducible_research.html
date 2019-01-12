@@ -1,0 +1,360 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Reproducible Research &mdash; bob.chapter.hobpad2.facepadprotocols 1.0.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="bob.chapter.hobpad2.facepadprotocols 1.0.0 documentation" href="index.html"/>
+        <link rel="next" title="User Guide" href="user_guide.html"/>
+        <link rel="prev" title="Installation" href="installation.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> bob.chapter.hobpad2.facepadprotocols
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Reproducible Research</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-easy-way-to-reproduce-the-results">The easy way to reproduce the results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-by-step">Step by step</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#downloading-score-files">Downloading score files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#downloading-the-database">Downloading the database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reproducing-results-of-the-chapter">Reproducing results of the chapter</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#algorithmic-evaluation-unconstrained">Algorithmic Evaluation Unconstrained</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#retrieve-the-results">Retrieve the results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">bob.chapter.hobpad2.facepadprotocols</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Reproducible Research</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/reproducible_research.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="reproducible-research">
+<h1>Reproducible Research<a class="headerlink" href="#reproducible-research" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>System scores generated with evaluated PAD methods are available.</li>
+<li>Software for reproduce the results are available.</li>
+<li><dl class="first docutils">
+<dt>Python bob-based framework is now available for running your face-PAD over four databases:</dt>
+<dd><ul class="first last">
+<li>OULU-NPU (Chapter evaluation)</li>
+<li>MSU-MFSD</li>
+<li>REPLAY-MOBILE</li>
+<li>REPLAY-ATTACK</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="section" id="the-easy-way-to-reproduce-the-results">
+<h2>The easy way to reproduce the results<a class="headerlink" href="#the-easy-way-to-reproduce-the-results" title="Permalink to this headline">¶</a></h2>
+<p>There is available a python script which perform all the operations to get the figures and tables reported in the chapter.</p>
+<p>Note: We assume you have already install the package (See Installation page)</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ <span class="c1">#You should be inside the package directory (bob.chapter.hobpad2.facepadprotocols)</span>
+$ bin/reproducible_research.py --verbose
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>This script will do:</dt>
+<dd><ol class="first last arabic simple">
+<li>Download the scripts (wget)</li>
+<li>From the scores, it evaluates the performance for all the protocols presented in the chapter.</li>
+<li>Retrieve the tables and figures and summarize into a html webpage (result/chapter/summary.html)</li>
+</ol>
+</dd>
+</dl>
+</div>
+<div class="section" id="step-by-step">
+<h2>Step by step<a class="headerlink" href="#step-by-step" title="Permalink to this headline">¶</a></h2>
+<p>If you prefer reproduce the results step by step, you can follow the instructions below.</p>
+<div class="section" id="downloading-score-files">
+<h3>Downloading score files<a class="headerlink" href="#downloading-score-files" title="Permalink to this headline">¶</a></h3>
+<p>We are providing the score files obtained for all the systems presented in the chapter. These score files can be used to compute error rates (ACER, APCER, BPCER, HTER) over all of the presented protocols.
+To download the scores, please execute the following script:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ <span class="c1">#You should be inside the package directory (bob.chapter.hobpad2.facepadprotocols)</span>
+$ bin/download_scores.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="downloading-the-database">
+<h2>Downloading the database<a class="headerlink" href="#downloading-the-database" title="Permalink to this headline">¶</a></h2>
+<p>The proposed frameworks has been created for be used with whatever database. From now, it has been tested with OULU-NPU, MSU-MFSD, REPLAY-MOBILE and REPLAY-ATTACK. In the chapter we share the results considering OULU-NPU data.</p>
+<p>Follow the steps given in <a class="reference external" href="https://sites.google.com/site/oulunpudatabase/welcome">https://sites.google.com/site/oulunpudatabase/welcome</a>., you can download OULU-NPU database.</p>
+<p>You must export environment variable for running the experiments:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">export</span> <span class="nv">OULU_NPU_PATH</span><span class="o">=</span><span class="s2">&quot;&lt;path/to/database&gt;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="reproducing-results-of-the-chapter">
+<h2>Reproducing results of the chapter<a class="headerlink" href="#reproducing-results-of-the-chapter" title="Permalink to this headline">¶</a></h2>
+<p>We assume that the score files of the PAD systems can be found in folder <cite>scores</cite>.</p>
+<div class="section" id="algorithmic-evaluation-unconstrained">
+<h3>Algorithmic Evaluation Unconstrained<a class="headerlink" href="#algorithmic-evaluation-unconstrained" title="Permalink to this headline">¶</a></h3>
+<p><strong>Getting Table 1</strong> (Algorithmic Evaluation Unconstrained) …</p>
+<p>To compute error rates presented in the Table 1 of the chapter, you can use the following script:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ <span class="c1">#For IQM system</span>
+$ bin/algorithmic_unconstrained_evaluation.py -r experiments/configuration_iqm_from_scores.py
+$ <span class="c1">#For Gradiant system</span>
+$ bin/algorithmic_unconstrained_evaluation.py -r experiments/configuration_gradiant_from_scores.py
+</pre></div>
+</div>
+<p>The script will create a folder for each configuration of PAD system and dataset. The folders contain DET curves for each given configuration (subset of these plots are shown in Figure 4 of the chapter), histograms of score distributions, and error rates. The script also creates a text file ‘latex_table_overall_stats_eer.txt’ which contains a LaTeX formatted table with the results from Table 4 of the paper.</p>
+<p><strong>Getting Figure 5</strong> (Algorithmic Evaluation Constrained) …</p>
+<p>To compute error rates for different types of attack as presented in Figure 5, please execute following scripts:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ <span class="c1">#For IQM system</span>
+$ bin/algorithmic_constrained_evaluation.py -r experiments/configuration_iqm_from_scores.py
+$ <span class="c1">#For Gradiant system</span>
+$ bin/algorithmic_constrained_evaluation.py -r experiments/configuration_gradiant_from_scores.py
+</pre></div>
+</div>
+<p><strong>Getting Figure 6</strong> (Algorithmic Evaluation Constrained with pretrained face-PAD) …</p>
+<p>To compute error rates for different types of attack as presented in Figure 6, please execute following scripts:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ <span class="c1">#For IQM system</span>
+$ bin/algorithmic_constrained_evaluation.py -r experiments/configuration_iqm_from_scores_pretrained.py
+$ <span class="c1">#For Gradiant system</span>
+$ bin/algorithmic_constrained_evaluation.py -r experiments/configuration_gradiant_from_scores_pretrained.py
+</pre></div>
+</div>
+<p><strong>Getting Table 2</strong> (End-to-end Evaluation) …</p>
+<p>To compute error rates for different types of attack as presented in Table 2, please execute the following script:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ <span class="c1">#For IQM system</span>
+$ bin/end_to_end_evaluation.py -r experiments/end_to_end_iqm.py
+</pre></div>
+</div>
+<p>Please, consider these measurements are not reproducibles due to depends on the execution processor. Reported table was calculated with a Intel (R) XeonRCPU X5675 &#64;3.07GHz</p>
+</div>
+<div class="section" id="retrieve-the-results">
+<h3>Retrieve the results<a class="headerlink" href="#retrieve-the-results" title="Permalink to this headline">¶</a></h3>
+<p>To make easier obtaining the results, there is a script which will put together reported tables into a html page.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ bin/retrieve_results.py
+</pre></div>
+</div>
+<p>Results will be stored in result/chapter/summary.html</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="user_guide.html" class="btn btn-neutral float-right" title="User Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="installation.html" class="btn btn-neutral" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Gradiant.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

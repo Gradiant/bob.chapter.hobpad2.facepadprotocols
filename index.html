@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Challenges of Face Presentation Attack Detection in Real Scenarios &mdash; bob.chapter.hobpad2.facepadprotocols 1.0.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="bob.chapter.hobpad2.facepadprotocols 1.0.0 documentation" href="#"/>
+        <link rel="next" title="Installation" href="installation.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> bob.chapter.hobpad2.facepadprotocols
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducible_research.html">Reproducible Research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">bob.chapter.hobpad2.facepadprotocols</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Challenges of Face Presentation Attack Detection in Real Scenarios</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="challenges-of-face-presentation-attack-detection-in-real-scenarios">
+<h1>Challenges of Face Presentation Attack Detection in Real Scenarios<a class="headerlink" href="#challenges-of-face-presentation-attack-detection-in-real-scenarios" title="Permalink to this headline">¶</a></h1>
+<p>Bob package to reproduce the work carried out in chapter Challenges of Face Presentation Attack Detection in Real Scenarios in the Handbook of Biometric Anti-Spoofing.</p>
+<div class="section" id="abstract">
+<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
+<p>In the current context of digital transformation, the increasing trend in the use of personal devices for accessing online services has fostered the necessity of secure cyberphysical solutions. Biometric technologies for mobile devices, and face recognition specifically, have emerged as a secure and convenient approach. However, such a mobile scenario also brings some specific threats, and spoofing attack detection is, without any doubt, one of the most challenging. Although much effort has been devoted in anti-spoofing techniques over the past few years, there are still many challenges to be solved when implementing these systems in real use cases. This chapter analyses some of the gaps between research and real scenario deployments, including generalisation, usability, and performance. More specifically, we will focus on how to select and configure an algorithm for real scenario deployments, paying special attention to use cases involving limited processing capacity devices (e.g., mobile devices), and we will present a publicly available evaluation framework for this purpose.</p>
+</div>
+<div class="section" id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
+<p>If you use this framework, please cite the following publication:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@Inbook</span><span class="p">{</span><span class="n">Costa</span><span class="o">-</span><span class="n">Pazo2019</span><span class="p">,</span>
+    <span class="n">author</span><span class="o">=</span><span class="s2">&quot;Costa-Pazo, Artur and Vazquez-Fernandez, Esteban and Alba-Castro, Jos{</span><span class="se">\&#39;</span><span class="s2">e} Luis and Gonz{</span><span class="se">\&#39;</span><span class="s2">a}lez-Jim{</span><span class="se">\&#39;</span><span class="s2">e}nez, Daniel&quot;</span><span class="p">,</span>
+    <span class="n">editor</span><span class="o">=</span><span class="s2">&quot;Marcel, S{</span><span class="se">\&#39;</span><span class="s2">e}bastien and Nixon, Mark S. and Fierrez, Julian and Evans, Nicholas&quot;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Challenges of Face Presentation Attack Detection in Real Scenarios&quot;</span><span class="p">,</span>
+    <span class="n">bookTitle</span><span class="o">=</span><span class="s2">&quot;Handbook of Biometric Anti-Spoofing: Presentation Attack Detection&quot;</span><span class="p">,</span>
+    <span class="n">year</span><span class="o">=</span><span class="s2">&quot;2019&quot;</span><span class="p">,</span>
+    <span class="n">publisher</span><span class="o">=</span><span class="s2">&quot;Springer International Publishing&quot;</span><span class="p">,</span>
+    <span class="n">address</span><span class="o">=</span><span class="s2">&quot;Cham&quot;</span><span class="p">,</span>
+    <span class="n">pages</span><span class="o">=</span><span class="s2">&quot;247--266&quot;</span><span class="p">,</span>
+    <span class="n">isbn</span><span class="o">=</span><span class="s2">&quot;978-3-319-92627-8&quot;</span><span class="p">,</span>
+    <span class="n">doi</span><span class="o">=</span><span class="s2">&quot;10.1007/978-3-319-92627-8_12&quot;</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://doi.org/10.1007/978-3-319-92627-8_12&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This package contains scripts to reproduce the results from the paper. The package also provides score files for IQM and GRADIANT PAD algorithms, the systems reported in the chapter.</p>
+</div>
+<div class="section" id="reproducible-research">
+<h2>Reproducible Research<a class="headerlink" href="#reproducible-research" title="Permalink to this headline">¶</a></h2>
+<p>The easiest way to reproduce the result presented in the chapter is using docker.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ docker pull acostapazo/bob.chapter.hobpad2.facepadprotocols:latest
+</pre></div>
+</div>
+<p>Once you have downloaded the docker image, you can type:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ docker run -v <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/bob.chapter.hobpad2.facepadprotocols acostapazo/bob.chapter.hobpad2.facepadprotocols:latest bin/bash -c <span class="s2">&quot;cd bob.chapter.hobpad2.facepadprotocols; ./ci.sh; ./rr.sh&quot;</span>
+</pre></div>
+</div>
+<p>Then, the results will be available on the folder result/chapter</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>result/chapter/
+├── results
+│   ├── fig_5_a_iqm.png
+│   ├── fig_5_b_gradiant.png
+│   ├── fig_6_a_iqm.png
+│   ├── fig_6_b_gradiant.png
+│   ├── table_1_gradiant.html
+│   └── table_1_iqm.html
+└── summary.html
+</pre></div>
+</div>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#docker-installation">Docker Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#local-installation">Local Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reproducible_research.html">Reproducible Research</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reproducible_research.html#the-easy-way-to-reproduce-the-results">The easy way to reproduce the results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reproducible_research.html#step-by-step">Step by step</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reproducible_research.html#downloading-the-database">Downloading the database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reproducible_research.html#reproducing-results-of-the-chapter">Reproducing results of the chapter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide.html">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide.html#how-to-setup-your-experiment">How to setup your experiment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide.html#algorithmic-unconstrained-evaluation">Algorithmic Unconstrained Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide.html#algorithmic-constrained-evaluation">Algorithmic Constrained Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide.html#end-to-end-evaluation">End to end Evaluation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Gradiant.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

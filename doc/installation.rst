@@ -5,18 +5,33 @@
 Installation
 ============
 
-Linux Installation
+Docker Installation
+-------------------
+
+1. Download the docker image
+
+.. code-block:: sh
+
+    $ docker pull acostapazo/bob.chapter.hobpad2.facepadprotocols:latest
+
+2. Check your installation out.
+
+
+.. code-block:: sh
+
+    $ docker run -v $(pwd):/bob.chapter.hobpad2.facepadprotocols acostapazo/bob.chapter.hobpad2.facepadprotocols:latest bin/bash -c "cd bob.chapter.hobpad2.facepadprotocols; ./ci.sh; ./rr.sh"
+
+
+Local Installation
 ------------------
 
 1. Install conda -> https://conda.io/docs/user-guide/install/index.html
 
-2. Create the conda env from file (environment_linux.yml)
-
-Note: You should be inside the package directory (bob.chapter.hobpad2.facepadprotocols)
+2. Create the conda env
 
 .. code-block:: sh
 
-    $ conda env create -f enviroments/environment_linux.yml
+    $ conda create --name hobpad2_chapter14_env python=2.7
 
 3. Activate the environment
 
@@ -48,8 +63,9 @@ Note: You should be inside the package directory (bob.chapter.hobpad2.facepadpro
     $ python bootstrap-buildout.py
     $ bin/buildout
 
+6. Reproduce the results
 
-Mac OS x Installation
----------------------
-not yet supported.
+.. code-block:: sh
+
+    $ bin/reproducible_research.py
 

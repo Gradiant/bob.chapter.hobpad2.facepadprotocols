@@ -66,13 +66,13 @@ For more info, please check out the [Doc](https://gradiant.github.io/bob.chapter
 2. Create the conda env
 
 ~~~
-    conda create --name bob.gradiant python=2.7
+    conda create --name hobpad2_chapter14_env python=2.7
 ~~~
 
 3. Activate the environment and add some channels
 
 ~~~
-   source activate bob.gradiant
+   source activate hobpad2_chapter14_env
    conda config --env --add channels defaults
    conda config --env --add channels https://www.idiap.ch/software/bob/conda
 ~~~

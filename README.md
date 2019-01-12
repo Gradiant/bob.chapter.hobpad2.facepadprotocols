@@ -1,4 +1,4 @@
-# bob.chapter.hobpad2.facepadprotocols
+# bob.chapter.hobpad2.facepadprotocols [![Build Status](https://travis-ci.org/Gradiant/bob.chapter.hobpad2.facepadprotocols.svg?branch=master)](https://travis-ci.org/Gradiant/bob.chapter.hobpad2.facepadprotocols) [![Doc](http://img.shields.io/badge/docs-latest-orange.svg)](https://gradiant.github.io/bob.chapter.hobpad2.facepadprotocols/)
  
 [Bob](https://www.idiap.ch/software/bob/) package to reproduce the work carried out in chapter [Challenges of Face Presentation Attack Detection in Real Scenarios](https://link.springer.com/chapter/10.1007/978-3-319-92627-8_12) in the [Handbook of Biometric Anti-Spoofing](https://link.springer.com/book/10.1007/978-3-319-92627-8).
 
@@ -96,7 +96,7 @@ For more info, please check out the [Doc](https://gradiant.github.io/bob.chapter
     #You should be inside the activated conda env (bob.gradiant.pipelines)
     python bootstrap-buildout.py
     bin/buildout
-~~
+~~~
 
 ## Test
 

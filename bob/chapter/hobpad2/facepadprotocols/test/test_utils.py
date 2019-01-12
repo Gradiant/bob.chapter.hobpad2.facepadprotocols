@@ -28,6 +28,10 @@ class TestUtils(object):
         return numpy.array(cls.get_image())
 
     @classmethod
+    def get_svm_model_path(cls):
+        return '{}/iqm_trained_model'.format(cls.resources_path)
+
+    @classmethod
     def get_synthetic_dict_image(cls, timestamp_reference = 1500000000):
         dict_images = {}
         timestamp_reference = timestamp_reference

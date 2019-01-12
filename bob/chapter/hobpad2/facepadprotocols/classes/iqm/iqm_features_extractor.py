@@ -6,9 +6,12 @@ from bob.ip.qualitymeasure import galbally_iqm_features as iqm
 import numpy as np
 import cv2
 
-SIZE_INPUT_IMAGE = 320 #based on REPLAYMOBILE SIZE (240x320)
+SIZE_INPUT_IMAGE = 320  # based on REPLAYMOBILE SIZE (240x320)
+
+
 def resize_image_to_default(np_image):
     return resize_image_with_side_target_size(np_image, SIZE_INPUT_IMAGE)
+
 
 def resize_image_with_side_target_size(np_image, side_target_size):
     height, width = np_image.shape[:2]
@@ -21,6 +24,7 @@ def resize_image_with_side_target_size(np_image, side_target_size):
     size = (int(scale_factor * width), int(scale_factor * height))
     resized_image = cv2.resize(np_image, size, interpolation=cv2.INTER_CUBIC)
     return resized_image, scale_factor
+
 
 class IqmFeaturesExtractor(FeaturesExtractor):
     def __init__(self):

@@ -9,10 +9,10 @@ from bob.chapter.hobpad2.facepadprotocols.test.test_utils import TestUtils
 
 class UnitTestIqmFeaturesExtractor(unittest.TestCase):
 
-    def test_run_with_dict_images_lanscape(self):
-        dict_images = { '0' : TestUtils.get_numpy_image(),
-                        '33' : TestUtils.get_numpy_image(),
-                        '66': TestUtils.get_numpy_image()}
+    def test_should_extract_18_length_feature_vector_from_horizontal_image(self):
+        dict_images = {'0': TestUtils.get_numpy_image(),
+                       '33': TestUtils.get_numpy_image(),
+                       '66': TestUtils.get_numpy_image()}
 
         iqm_features_extractor = IqmFeaturesExtractor()
 
@@ -22,11 +22,11 @@ class UnitTestIqmFeaturesExtractor(unittest.TestCase):
         self.assertEqual(len(dict_features['33']), 18)
         self.assertEqual(len(dict_features['66']), 18)
 
-    def test_run_with_dict_images_portrait(self):
-        dict_images = { '0': np.rot90(TestUtils.get_numpy_image()),
-                        '33': np.rot90(TestUtils.get_numpy_image()),
-                        '66': np.rot90(TestUtils.get_numpy_image())
-                      }
+    def test_should_extract_18_length_feature_vector_from_vertical_image(self):
+        dict_images = {'0': np.rot90(TestUtils.get_numpy_image()),
+                       '33': np.rot90(TestUtils.get_numpy_image()),
+                       '66': np.rot90(TestUtils.get_numpy_image())
+                       }
 
         iqm_features_extractor = IqmFeaturesExtractor()
 

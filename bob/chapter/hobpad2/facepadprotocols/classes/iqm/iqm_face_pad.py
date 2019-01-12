@@ -6,18 +6,16 @@ from .iqm_features_extractor import IqmFeaturesExtractor
 from bob.gradiant.pipelines import  RbfSvc
 import numpy as np
 
-#TO UPDATE
-THRESHOLD = -0.975393
-SVM_PATH = '/media/data/workspace/biometrics/experiments_data/face/pad/iqm_framerate_and_temporal_evaluation/oulu_npu/iqm-galbally/pipelines/rbfsvc-gamma1.5/configurations/grandtest/framerate25_time_capture2000/'
-
 
 class IqmFacePad(FacePad):
-    def __init__(self, name='IqmFacePad', threshold=THRESHOLD):
+    def __init__(self, svm_model_path, threshold, name='IqmFacePad'):
         self.features_extractor = IqmFeaturesExtractor()
         self.classifier = RbfSvc(name='RbfSvc')
-        self.classifier.load(SVM_PATH)
+        self.classifier.load(svm_model_path)
         self.scores = []
-        super(IqmFacePad, self).__init__(name, threshold)
+        self.threshold = threshold
+        self.finished = False
+        super(IqmFacePad, self).__init__(name)
 
     def process(self, im):
         dict_images = {'0': im}
@@ -26,14 +24,16 @@ class IqmFacePad(FacePad):
         X = self.classifier.run(X)
         score = X['scores'][0]
         self.scores.append(score)
+        self.finished = True
 
-    def isfinished(self):
-        pass
+    def is_finished(self):
+        return self.finished
 
     def reset(self):
-        pass
+        self.scores = []
+        self.finished = False
 
-    def get_decission(self):
+    def get_decision(self):
         average_score = np.mean(self.scores)
         self.scores = []
         if average_score < self.threshold:

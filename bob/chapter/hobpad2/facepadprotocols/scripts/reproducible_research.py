@@ -37,10 +37,11 @@ def main():
                 '8- retrieve_results': 'bin/retrieve_results.py'
                 }
 
-    # Declaration of databases path is mandatory if we extracted features. As we are using pre-calculated scores we don't need the real path of the database data
+    # Declaration of databases path is mandatory if we extracted features.
+    # As we are using pre-calculated scores we don't need the real path of the database data
     os.environ['OULU_NPU_PATH'] = 'bin/'
 
-    for message, cmd in sorted(commands.iteritems()):
+    for message, cmd in sorted(commands.items()):
         logger.info('{}'.format(message))
         logger.debug('command : {}'.format(cmd))
         output = subprocess.check_output('{} {}'.format(cmd, verbose), shell=True)

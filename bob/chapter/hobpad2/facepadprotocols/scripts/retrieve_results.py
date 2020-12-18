@@ -40,15 +40,12 @@ def main():
                    'result/gradiant_from_scores_pretrained/ACE/oulu-npu/pipelines/gradiant_from_scores_pretrained/evaluation/grandtest/plots/framerate_and_time_comparison/matplotlib/oulu-npu@grandtest_all_attacks_ACER@EER_figure.png'
                }
 
-    for name, src in results.iteritems():
+    for name, src in results.items():
         dst = OUTPUT + '/' + name
         if not os.path.isdir(os.path.dirname(dst)):
             os.makedirs(os.path.dirname(dst))
         logger.debug('Retrieving {} and storing in {}'.format(name, OUTPUT))
         copyfile(src, dst)
-
-    # TODO, set the same colors in fig_5_a_iqm as in chapter
-    # TODO, add end-to-end evaluation
 
 
 if __name__ == '__main__':

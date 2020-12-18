@@ -32,7 +32,7 @@ class IqmFeaturesExtractor(FeaturesExtractor):
 
     def run(self, dict_images, annotations = None):
         dict_features = {}
-        for key, image in dict_images.iteritems():
+        for key, image in dict_images.items():
             resized_image, factor = resize_image_to_default(image)
             image_bob_format = np.swapaxes(resized_image,0,2)
             features = iqm.compute_quality_features(image_bob_format)

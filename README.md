@@ -38,7 +38,7 @@ docker pull acostapazo/bob.chapter.hobpad2.facepadprotocols:latest
 Once you have downloaded the docker image, you can type:
 
 ~~~
-docker run -v $(pwd):/bob.chapter.hobpad2.facepadprotocols acostapazo/bob.chapter.hobpad2.facepadprotocols:latest bin/bash -c "cd bob.chapter.hobpad2.facepadprotocols; ./ci.sh; ./rr.sh"
+docker run -v $(pwd):/bob.chapter.hobpad2.facepadprotocols acostapazo/bob.chapter.hobpad2.facepadprotocols:latest bin/bash -c "source activate bob.chapter.hobpad2.facepadprotocols; cd bob.chapter.hobpad2.facepadprotocols; ./ci.sh; ./rr.sh"
 ~~~
 
 Then, the results will be available on the folder result/chapter

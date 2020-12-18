@@ -8,8 +8,12 @@ COPY envs/ubuntu_environment.yml /envs/
 RUN conda env create -f envs/ubuntu_environment.yml
 RUN git clone https://github.com/Gradiant/bob.chapter.hobpad2.facepadprotocols.git
 WORKDIR bob.chapter.hobpad2.facepadprotocols
-RUN . activate bob.chapter.hobpad2.facepadprotocols && pip install git-python && ./ci.sh
 
-ENTRYPOINT [". activate bob.chapter.hobpad2.facepadprotocols && /rr.sh"]
+# Make RUN commands use the new environment:
+SHELL ["conda", "run", "-n", "bob.chapter.hobpad2.facepadprotocols", "/bin/bash", "-c"]
+
+RUN ./ci.sh
+
+ENTRYPOINT ["/rr.sh"]
 
 ENV LANG C.UTF-8

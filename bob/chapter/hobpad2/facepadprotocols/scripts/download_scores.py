@@ -50,7 +50,7 @@ def main():
                     '2-unzipping': 'unzip {} -d {}'.format(dest_path_zip, tmp_path),
                     '3-moving to scores folder': 'mv {}/{}/* scores'.format(tmp_path, name_zip)}
 
-        for message, cmd in sorted(commands.iteritems()):
+        for message, cmd in sorted(commands.items()):
             logger.debug('{}...'.format(message))
             logger.debug('command : {}'.format(cmd))
 

@@ -14,6 +14,6 @@ SHELL ["conda", "run", "-n", "bob.chapter.hobpad2.facepadprotocols", "/bin/bash"
 
 RUN ./ci.sh
 
-ENTRYPOINT ["/rr.sh"]
+ENTRYPOINT ["sh", "/rr.sh"]
 
 ENV LANG C.UTF-8

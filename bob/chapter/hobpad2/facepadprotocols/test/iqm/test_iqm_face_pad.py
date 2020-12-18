@@ -13,8 +13,7 @@ class UnitTestIqmFacePad(unittest.TestCase):
         svm_model_path = TestUtils.get_svm_model_path()
         image = TestUtils.get_numpy_image()
 
-        iqm_face_pad = IqmFacePad(svm_model_path,
-                                  threshold=threshold)
+        iqm_face_pad = IqmFacePad(svm_model_path, threshold)
 
         iqm_face_pad.process(image)
 

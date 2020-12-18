@@ -15,7 +15,7 @@ class IqmFacePad(FacePad):
         self.scores = []
         self.threshold = threshold
         self.finished = False
-        super(IqmFacePad, self).__init__(name)
+        super(IqmFacePad, self).__init__(name, threshold)
 
     def process(self, im):
         dict_images = {'0': im}
